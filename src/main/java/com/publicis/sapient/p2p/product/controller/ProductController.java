@@ -17,19 +17,19 @@ public class ProductController {
    private ProductService productService;
 
    @GetMapping(value = "/id/{id}")
-   public List<ProductDetails> getProductDetail(@PathVariable String id){
+   public List<Product> getProductDetail(@PathVariable String id){
        List<String> ids = Arrays.asList(id.split(","));
-       List<ProductDetails> productDetails = new ArrayList<>();
-       ids.forEach(productId -> productDetails.add(productService.getProductDetails(productId)));
-       return productDetails;
+       List<Product> products = new ArrayList<>();
+       ids.forEach(productId -> products.add(productService.getProductDetails(productId)));
+       return products;
    }
 
    @GetMapping(value = "")
-   public List<ProductDetails> getProductDetails(@RequestParam String id){
+   public List<Product> getProductDetails(@RequestParam String id){
        List<String> ids = Arrays.asList(id.split(","));
-       List<ProductDetails> productDetails = new ArrayList<>();
-       ids.forEach(productId -> productDetails.add(productService.getProductDetails(productId)));
-       return productDetails;
+       List<Product> products = new ArrayList<>();
+       ids.forEach(productId -> products.add(productService.getProductDetails(productId)));
+       return products;
     }
 
     @GetMapping(value = "/insert")

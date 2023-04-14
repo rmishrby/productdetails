@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: 
+      uri: mongodb://p2p-exchange:Ze44asOZtE6uCvx4mw01Jbfxqunfkji097e2FVuBFuC1n7e8BVjKBmIapt7F74vYbKy9GrmSEE0CACDbAmYgwA==@p2p-exchange.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@p2p-exchange@
 #      port: 10255
       database: p2p
 #      uri :

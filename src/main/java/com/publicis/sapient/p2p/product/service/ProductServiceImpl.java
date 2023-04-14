@@ -61,8 +61,14 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public ProductDetails getProductDetails(String productId) {
-        return productRepository.findById(productId).orElseThrow(() -> new RuntimeException("product not found with id : " + productId));
+    public Product getProductDetails(String productId) {
+        ProductDetails productDetails = productRepository.findById(productId).orElseThrow(() -> new RuntimeException("product not found with id : " + productId));
+        Product product = new Product();
+        product.setProductDetails(productDetails);
+        List<Item> items = new ArrayList<>();
+        productDetails.getItemsId().forEach(id -> items.add(itemRepository.findById(id).orElseThrow()));
+        product.setItems(items);
+        return product;
     }
 
 }
