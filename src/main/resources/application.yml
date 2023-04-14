@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+spring:
+  data:
+    mongodb:
+      uri: 
+#      port: 10255
+      database: p2p
+#      uri :
+catalogjson:
+  file:
+    path: C:\prod\P2P\v2\product\catalog_data\CarrerFour_Product.json
