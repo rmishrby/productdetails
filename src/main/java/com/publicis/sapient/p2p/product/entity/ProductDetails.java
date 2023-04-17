@@ -10,6 +10,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @Data
 @AllArgsConstructor
@@ -27,4 +28,5 @@ public class ProductDetails {
     private List<Image> images;
     private List<Attributes> attributes;
     private String brand;
+
 }

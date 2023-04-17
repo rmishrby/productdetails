@@ -1,6 +1,7 @@
 server:
   port: 9000
-
+  servlet:
+    context-path: /product-service
 spring:
   data:
     mongodb:
@@ -10,4 +11,14 @@ spring:
 #      uri :
 catalogjson:
   file:
-    path: C:\prod\P2P\v2\product\catalog_data\CarrerFour_Product.json
+    path: C:\Users\ravmishr5\Desktop\productdetailsV2\productdetails\catalog_data\CarrerFour_Product.json
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /rest-api-docs
+  swagger-ui:
+    path: /swagger-ui
+
+
