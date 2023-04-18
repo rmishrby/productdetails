@@ -1,0 +1,22 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /product-service
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://p2p-exchange:Ze44asOZtE6uCvx4mw01Jbfxqunfkji097e2FVuBFuC1n7e8BVjKBmIapt7F74vYbKy9GrmSEE0CACDbAmYgwA==@p2p-exchange.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@p2p-exchange@
+      database: p2p
+
+catalogjson:
+  file:
+    path: C:\Users\ravmishr5\Desktop\productdetailsV2\productdetails\catalog_data\CarrerFour_Product.json
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /rest-api-docs
+  swagger-ui:
+    path: /swagger-ui
